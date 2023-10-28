@@ -80,7 +80,7 @@ print("Popped number from list:  ", str(popped))
 # - Search Operations -
 # ---------------------
 # Reference of the list:     [1, 2, 3, 4, 10, 5, [6, 7], 8, 9]
-# Searching by index method: 1
+# Searching by index method: 1 
 # In operator (3 in list):   True
 
 # ---------------------
