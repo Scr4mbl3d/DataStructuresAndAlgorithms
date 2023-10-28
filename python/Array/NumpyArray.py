@@ -2,7 +2,7 @@
 #     File name: NumpyArray.py
 #     Author: Aadhawan Maadheshwaran
 #     Date created: 10/28/2023
-#     Date last modified: 10/28/2023
+#     Date last modified: 10/29/2023
 #     Python Version: 3.12.0
 # ========================================
 
@@ -64,3 +64,40 @@ arr,popped = arr[:-1], arr[-1]
 #index can be given optionally else it fetches the last element
 print("Deleting by pop method:   ", arr)
 print("Popped number from list:  ", popped)
+
+# -- Result --
+
+# [1 2 3 4 5]
+# <class 'numpy.ndarray'>
+# Shape of the array : (5,)
+# Data type of array : int32
+
+# ---------------------
+# - Access Operations -
+# ---------------------
+# Accessing value by index: 1
+# Accessing list by index:  [1 2]
+
+# ---------------------
+# - Insert Operations -
+# ---------------------
+# Appending a number: [1 2 3 4 5 6]
+# Extending a list:   [1 2 3 4 5 6 7 8 9]
+# Inserting a number: [1 2 3 4 1 5 6 7 8 9]
+# Replacing a number: [1 2 9 4 1 5 6 7 8 9]
+
+# ---------------------
+# - Search Operations -
+# ---------------------
+# Reference of the list:     [1 2 9 4 1 5 6 7 8 9]
+# Searching by where method: [0 4]
+# Counting occurences:       2
+# In operator (30 in list):  True
+
+# ---------------------
+# - Delete Operations -
+# ---------------------
+# Reference of the list:     [1 2 9 4 1 5 6 7 8 9]
+# Deleting by remove method: [1 2 4 1 5 6 7 8 9]
+# Deleting by pop method:    [1 2 4 1 5 6 7 8]
+# Popped number from list:   9
