@@ -48,6 +48,7 @@ print("In operator (3 in list):  ", 3 in num_list)
 print("\n---------------------")
 print("- Delete Operations -")
 print("---------------------")
+print("Reference of the list:    ", num_list)
 del(num_list[6]) #removes the value in the index
 print("Deleting by index:        ", str(num_list))
 num_list.remove(10) #removes the first occurence of the value given
@@ -85,6 +86,7 @@ print("Popped number from list:  ", str(popped))
 # ---------------------
 # - Delete Operations -
 # ---------------------
+# Reference of the list:     [1, 2, 3, 4, 10, 5, [6, 7], 8, 9]
 # Deleting by index:         [1, 2, 3, 4, 10, 5, 8, 9]
 # Deleting by remove method: [1, 2, 3, 4, 5, 8, 9]
 # Deleting by pop method:    [1, 2, 3, 4, 5, 8]
