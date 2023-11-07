@@ -1,3 +1,11 @@
+# ========================================
+#     File name: BuiltInDictionary.py
+#     Author: Aadhawan Maadheshwaran
+#     Date created: 11/07/2023
+#     Date last modified: 11/07/2023
+#     Python Version: 3.12.0
+# ========================================
+
 dic = {'Name':'Scrambled',
        'Age': 23,
        'Comment': 'Good Boy',
