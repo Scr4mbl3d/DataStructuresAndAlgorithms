@@ -1,0 +1,24 @@
+Due: 01-01-2024
+
+0. Binary Search Tree implemenatation
+1. Graph & Algorithms (python)
+    a. structure
+    b. BFS & DFS
+    C. Dijkstra
+    d. Bellman Ford
+    e. Floyd Warshall
+    f. Kruskal
+    g. Prims
+2. Decorators (python)
+3. creating class for Trees (python)
+4. AVL Trees (python)
+5. Red Black Trees (python)
+6. Search Algorithms (python)
+7. Sort Algorithms (python)
+8. Doc String for all methods and renaming variable names (python)
+9. Fibnacci as greedy, divide & conquer, DP (python)
+10. Backtracking (python)
+
+
+
+
