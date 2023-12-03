@@ -15,6 +15,7 @@ class SinglyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+        self.length = 0
     
     def traverse(self):
         node = self.head
@@ -49,9 +50,11 @@ class SinglyLinkedList:
         if self.head is None:
             self.head = tempNode
             self.tail = tempNode
+            self.length += 1
             return
         self.tail.nxt = tempNode
         self.tail = tempNode
+        self.length += 1
 
     def insert(self, idx, value):
         tempNode = Node(value, None)
@@ -59,6 +62,7 @@ class SinglyLinkedList:
         if idx == 0:
             tempNode.nxt = self.head
             self.head = tempNode
+            self.length += 1
             return
         for i in range(1,idx):
             node = node.nxt
@@ -69,6 +73,7 @@ class SinglyLinkedList:
                 return
         tempNode.nxt = node.nxt
         node.nxt = tempNode
+        self.length += 1
 
     def extend(self,lst):
         if isinstance(lst, list):
@@ -76,6 +81,7 @@ class SinglyLinkedList:
                 self.append(item)
         elif isinstance(lst, (str, int, float)):
             self.append(lst)
+            self.length += 1
         
 #Search
     def index(self, value):
@@ -101,43 +107,46 @@ class SinglyLinkedList:
     def remove(self,slicedvalue):
         node = self.head
         if node.value == slicedvalue:
-            self.head = node.nxt
+            self.head = None
+            self.length -= 1
             return
         while node:
             if node.nxt:
                 if node.nxt.value == slicedvalue:
                     node.nxt = node.nxt.nxt if node.nxt.nxt else None
+                    self.length -= 1
                     return 
             node = node.nxt
             
 
     def pop(self):
-        node = self.head
-        popped = None
-        for _ in range(0,len(self)-2):
-            node = node.nxt
-        self.tail = node
-        try:
-            popped = node.nxt.value
-        except(AttributeError):
-            print('pop from empty list')
-            return 
-        node.nxt = None
-        return popped
+        popped_node = self.tail
+        if self.length == 1:
+            print(self.length)
+            self.head  = self.tail = None
+            return popped_node.value
+        temp = self.head
+        while temp.nxt is not self.tail:
+            temp = temp.nxt
+        self.tail = temp
+        temp.nxt = None
+        self.length -= 1
+        return popped_node.value
     
     def popleft(self):
         node = self.head
-        popped = self.head.value if self.head.value else None
+        popped = self.head.value 
         self.head = node.nxt
+        self.length -=1
         return popped
 
 
             
 
-num_list = SinglyLinkedList()
-num_list.extend([1,2,3,4])
+# num_list = SinglyLinkedList()
+# num_list.extend([1,2,3,4])
 
-# uncomment to review result and comment out. This code is used in another module
+# #uncomment to review result and comment out. This code is used in another module
 # #access
 # print(num_list)
 # print(num_list.traverse())

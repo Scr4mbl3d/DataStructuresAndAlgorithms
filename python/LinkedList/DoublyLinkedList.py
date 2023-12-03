@@ -136,56 +136,57 @@ class Node:
         self.value = value
         self.nxt = nxt
         self.prev = prev
-    
-num_list = DoublyLinkedList()
-num_list.extend([1,2,3,4])
+
+if __name__ == '__main__':
+    num_list = DoublyLinkedList()
+    num_list.extend([1,2,3,4])
 
 
-#access
-print(num_list)
-print(num_list.traverse())
-print("\n---------------------")
-print("- Access Operations -")
-print("---------------------")
-print("Accessing value by index: " +str(num_list[1]))
-print("Accessing list by index:  " +str(num_list[0:3]))   #slicing (upper limit index is exclusive)
+    #access
+    print(num_list)
+    print(num_list.traverse())
+    print("\n---------------------")
+    print("- Access Operations -")
+    print("---------------------")
+    print("Accessing value by index: " +str(num_list[1]))
+    print("Accessing list by index:  " +str(num_list[0:3]))   #slicing (upper limit index is exclusive)
 
 
-#insert
-print("\n---------------------")
-print("- Insert Operations -")
-print("---------------------")
-num_list.append(5)
-print("Appending a number: " , num_list.traverse())
+    #insert
+    print("\n---------------------")
+    print("- Insert Operations -")
+    print("---------------------")
+    num_list.append(5)
+    print("Appending a number: " , num_list.traverse())
 
-num_list.append([6,7]) # adds the list as a nested list
-print("Appending a list:   " , num_list.traverse())
+    num_list.append([6,7]) # adds the list as a nested list
+    print("Appending a list:   " , num_list.traverse())
 
-num_list.extend([8,9]) # adds the elements of the list
-print("Extending a list:   " , num_list.traverse())
+    num_list.extend([8,9]) # adds the elements of the list
+    print("Extending a list:   " , num_list.traverse())
 
-num_list.insert(4, 10) # moves the value/list of the given index to next and insert
-print("Inserting a number: " , num_list.traverse())
+    num_list.insert(4, 10) # moves the value/list of the given index to next and insert
+    print("Inserting a number: " , num_list.traverse())
 
 
-#search
-print("\n---------------------")
-print("- Search Operations -")
-print("---------------------")
-print("Reference of the list:    ", num_list.traverse())
-print("Searching by index method: " +str(num_list.index(2))) #find the first occuring index of given value, returns -1 if not exists
-print("In operator (3 in list):  ", 3 in num_list)
+    #search
+    print("\n---------------------")
+    print("- Search Operations -")
+    print("---------------------")
+    print("Reference of the list:    ", num_list.traverse())
+    print("Searching by index method: " +str(num_list.index(2))) #find the first occuring index of given value, returns -1 if not exists
+    print("In operator (3 in list):  ", 3 in num_list)
 
-#delete
-print("\n---------------------")
-print("- Delete Operations -")
-print("---------------------")
-print("Reference of the list:    ", num_list.traverse())
-num_list.remove(10) #removes the first occurence of the value given
-print("Deleting by remove method:" , num_list.traverse())
-popped = num_list.pop() #index can be given optionally else it fetches the last element
-print("Deleting by pop method:   " ,num_list.traverse())
-print("Popped number from list:  ", popped)
+    #delete
+    print("\n---------------------")
+    print("- Delete Operations -")
+    print("---------------------")
+    print("Reference of the list:    ", num_list.traverse())
+    num_list.remove(10) #removes the first occurence of the value given
+    print("Deleting by remove method:" , num_list.traverse())
+    popped = num_list.pop() #index can be given optionally else it fetches the last element
+    print("Deleting by pop method:   " ,num_list.traverse())
+    print("Popped number from list:  ", popped)
 
 # -- Result --
 
