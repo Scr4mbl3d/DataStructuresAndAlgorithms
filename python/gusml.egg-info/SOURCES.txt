@@ -2,10 +2,15 @@ setup.py
 LinkedList/DoublyLinkedList.py
 LinkedList/SinglyLinkedList.py
 LinkedList/__init__.py
+Queue/DequeQueue.py
+Queue/LInkedListQueue.py
+Queue/ListQueue.py
+Queue/__init__.py
 Stack/DequeStack.py
 Stack/LinkedListStack.py
 Stack/ListStack.py
-Stack/__init__.py
+Tree/BinaryTree.py
+Tree/__init__.py
 gusml.egg-info/PKG-INFO
 gusml.egg-info/SOURCES.txt
 gusml.egg-info/dependency_links.txt
